@@ -1228,6 +1228,7 @@ GameObject:
   - component: {fileID: 1749059787}
   - component: {fileID: 1749059788}
   - component: {fileID: 1749059789}
+  - component: {fileID: 1749059790}
   m_Layer: 0
   m_Name: Horse_1
   m_TagString: Untagged
@@ -1353,6 +1354,25 @@ MonoBehaviour:
   JumpForce: 7
   MyRigidbody2D: {fileID: 1749059787}
   Feet: {fileID: 1749059788}
+--- !u!95 &1749059790
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749059784}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ef6fafc6aa21982459053feff8c90417, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1786507668
 GameObject:
   m_ObjectHideFlags: 0
