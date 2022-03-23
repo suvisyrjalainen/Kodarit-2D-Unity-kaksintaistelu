@@ -12,6 +12,8 @@ public class player : MonoBehaviour
 	
 	public CircleCollider2D Feet;
 	
+	public Animator MyAnimator;
+	
     // Start is called before the first frame update
     void Start()
     {
@@ -24,8 +26,18 @@ public class player : MonoBehaviour
         horizontalMovement = Input.GetAxis("Horizontal");
 		MyRigidbody2D.velocity = new Vector2(horizontalMovement * speed, MyRigidbody2D.velocity.y);
 		
+		MyAnimator.SetFloat("walk", Mathf.Abs(horizontalMovement));
+		
 		if(Input.GetButtonDown("Jump")  && Feet.IsTouchingLayers(LayerMask.GetMask("Ground"))){
 			MyRigidbody2D.AddForce(new Vector2(0f,JumpForce), ForceMode2D.Impulse);
+			MyAnimator.SetTrigger("jump");
+		}
+		
+		if(Feet.IsTouchingLayers(LayerMask.GetMask("Ground"))){
+			MyAnimator.SetBool("isGrounded", true);
+		}
+		else{
+			MyAnimator.SetBool("isGrounded", false);
 		}
     }
 	
