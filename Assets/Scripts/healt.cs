@@ -10,7 +10,7 @@ public class healt : MonoBehaviour
     public float Health;
     
     //Check for being alive
-    public bool IsAlive = true;
+    //public bool IsAlive = true;
 	
     // Start is called before the first frame update
     void Start()
@@ -31,6 +31,15 @@ public class healt : MonoBehaviour
         //Animator.SetTrigger("Die");
         //StartCoroutine(Dying());
     }
+	
+	void OnCollisionEnter2D(Collision2D collision)
+    {
+        
+        if (collision.gameObject.tag == "unicorn")
+        {
+			Debug.Log("Törmäys unicorniin");
+		}
+	}
 	
 	
 }

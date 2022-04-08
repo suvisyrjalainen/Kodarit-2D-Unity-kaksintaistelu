@@ -28,7 +28,11 @@ public class fight : MonoBehaviour
 		}
 		
 		if(Input.GetButtonDown("Fire3")){
-			
+			MyAnimator.SetBool("block", true);
+		}
+		
+		if(Input.GetButtonUp("Fire3")){
+			MyAnimator.SetBool("block", false);
 		}
         
     }
