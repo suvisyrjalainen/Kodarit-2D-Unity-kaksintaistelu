@@ -6,8 +6,12 @@ public class healt : MonoBehaviour
 {
 	
 	//Max health and current health
-    public float MaxHealth = 100f;
+    public float MaxHealth = 10f;
     public float Health;
+	
+	public Animator MyAnimator;
+	
+	public bool isAlive = true;
     
     //Check for being alive
     //public bool IsAlive = true;
@@ -22,13 +26,14 @@ public class healt : MonoBehaviour
     // Update is called once per frame
     void Update()
     {	
-        if(Health <= 0){
+        if(Health <= 0 && isAlive==true){
             Die();
         }
     }
 	
 	void Die(){
-        //Animator.SetTrigger("Die");
+        MyAnimator.SetTrigger("die");
+		isAlive = false;
         //StartCoroutine(Dying());
     }
 	
@@ -38,6 +43,9 @@ public class healt : MonoBehaviour
         if (collision.gameObject.tag == "unicorn")
         {
 			Debug.Log("Törmäys unicorniin");
+			Health -= 3;
+			Debug.Log(Health);
+			
 		}
 	}
 	

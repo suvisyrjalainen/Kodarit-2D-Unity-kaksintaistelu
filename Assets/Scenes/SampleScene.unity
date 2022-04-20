@@ -429,6 +429,7 @@ GameObject:
   - component: {fileID: 731231159}
   - component: {fileID: 731231160}
   - component: {fileID: 731231161}
+  - component: {fileID: 731231162}
   m_Layer: 0
   m_Name: Unicorn_16
   m_TagString: Untagged
@@ -554,6 +555,21 @@ CapsuleCollider2D:
   m_Offset: {x: -0.0409441, y: -0.0009765625}
   m_Size: {x: 0.6079197, y: 2}
   m_Direction: 0
+--- !u!114 &731231162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 731231156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da58e6a597e27f942976b2b91b7a1163, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 10
+  Health: 0
+  MyAnimator: {fileID: 0}
 --- !u!1 &955732481
 GameObject:
   m_ObjectHideFlags: 0
@@ -1553,11 +1569,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1749059784}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f75edba6107cc74fa0a7cf69d241140, type: 3}
+  m_Script: {fileID: 11500000, guid: da58e6a597e27f942976b2b91b7a1163, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 100
+  maxHealth: 10
   Health: 0
+  MyAnimator: {fileID: 1749059790}
 --- !u!1 &1786507668
 GameObject:
   m_ObjectHideFlags: 0
@@ -2209,7 +2226,7 @@ GameObject:
   - component: {fileID: 1904667761}
   m_Layer: 0
   m_Name: Unicorn_0
-  m_TagString: unicorn
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2329,6 +2346,6 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.06403848, y: 0}
-  m_Size: {x: 0.93268275, y: 2.088835}
+  m_Offset: {x: -0.06403848, y: 0.18279034}
+  m_Size: {x: 0.93268275, y: 1.7232544}
   m_Direction: 0
