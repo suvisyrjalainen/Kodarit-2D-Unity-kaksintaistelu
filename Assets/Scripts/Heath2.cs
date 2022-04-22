@@ -4,14 +4,20 @@ using UnityEngine;
 
 public class Heath2 : MonoBehaviour
 {
-	public float maxHealth = 10f;
+	public float maxHealth = 100f;
 	public float Health = 0f;
 	public Animator MyAnimator;
+	
+	//public GameObject healthbar;
+	
+	
 	
     // Start is called before the first frame update
     void Start()
     {
+		//healthbar = GameObject.Find("HealthbarPlayer");
         Health = maxHealth;
+		GetComponent<slider>().SetMaxHealth(maxHealth);
     }
 
     // Update is called once per frame
