@@ -8,14 +8,16 @@ public class Heath2 : MonoBehaviour
 	public float Health = 0f;
 	public Animator MyAnimator;
 	
-	//public GameObject healthbar;
+	
 	
 	
 	
     // Start is called before the first frame update
     void Start()
     {
-		//healthbar = GameObject.Find("HealthbarPlayer");
+		GameObject healthbar = GameObject.Find("HealthbarPlayer");
+		
+		Debug.Log("Mikä tämä on: " + healthbar);
         Health = maxHealth;
 		GetComponent<slider>().SetMaxHealth(maxHealth);
     }
